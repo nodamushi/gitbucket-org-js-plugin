@@ -1,6 +1,6 @@
 package io.github.nodamushi.gitbucket.plugins.orgjs
 import gitbucket.core.plugin.{RenderRequest, Renderer}
-import play.twirl.api.Html
+import play.twirl.api.{Html, HtmlFormat}
 
 class OrgJsRenderer extends  Renderer {
 
@@ -17,8 +17,11 @@ class OrgJsRenderer extends  Renderer {
                      |})();</script>
                      |<script src="${request.context.path}/plugin-assets/org_js/bundle.js" type="text/javascript"></script>
                      |""".stripMargin
-    Html(
-      script + s"""<div id="org-document">${xml.Utility.escape(request.fileContent)}</div>"""
+    new Html(scala.collection.immutable.Seq(
+      Html(script),
+      Html("""<div id="org-document">"""),
+      HtmlFormat.escape(request.fileContent),
+      Html("</div>"))
     )
   }
 

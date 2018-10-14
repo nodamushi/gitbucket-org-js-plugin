@@ -7,7 +7,8 @@ class Plugin extends gitbucket.core.plugin.Plugin {
   override val pluginName: String = "org-js Render Plugin"
   override val description: String = "Renders org-mode with org-js"
   override val versions: List[Version] = List(
-    new Version("1.0.0")
+    new Version("1.0.0"),
+    new Version("1.0.1")
   )
 
   override val assetsMappings: Seq[(String, String)] = Seq("/org_js"->"/org_js")
