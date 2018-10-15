@@ -15,3 +15,9 @@ Plugin version | GitBucket version
 ## Installation
 
 Download jar file `gitbucket-org-js-plugin_*-*.jar` and put into `GITBUCKET_HOME/plugins`.
+
+
+## Include Library
+
+
+- [org-js](https://github.com/mooz/org-js) : Author [mooz](https://github.com/mooz) :MIT License

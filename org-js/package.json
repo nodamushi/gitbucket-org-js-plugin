@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "nodamushi",
-  "license": "MIT",
+  "license": "Unlicense",
   "devDependencies": {
     "org": "0.2.0",
     "webpack": "^4.20.2",
